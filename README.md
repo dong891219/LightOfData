@@ -1,2 +1,3 @@
 # LightOfData
-数据之光 go项目
+go语言搭建后台管理系统
+基于beego框架
