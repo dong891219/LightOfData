@@ -1,0 +1,4 @@
+*.log
+*.exe
+*.exe~
+tests/

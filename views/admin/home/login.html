@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Beego | 系统</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <style>
+        .login-box{
+            width: 360px;
+            margin: 7% auto;
+        }
+        .login-logo{
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        .login-logo a{
+            color: #444;
+            text-decoration: none;
+        }
+
+        .login-box-msg{
+            margin: 0;
+            text-align: center;
+            padding: 0 20px 20px 20px;
+        }
+        .login-box-body {
+            background: #fff;
+            padding: 20px;
+            border-top: 0;
+            color: #666;
+        }
+    </style>
+
+</head>
+<body class="layui-layout-body" style="background: #d2d6de">
+<div class="login-box">
+    <div class="login-logo">
+        <a ><b>beego版后台管理系统</b></a>
+    </div>
+    <div class="login-box-body">
+        <p class="login-box-msg">登陆</p>
+
+        <form  class="layui-form layui-form-pane" method="post">
+            <div class="layui-form-item">
+                <input type="text" name="" placeholder="用户名" required lay-verify="required" autocomplete="off" class="layui-input">
+
+            </div>
+            <div class="layui-form-item">
+                <input type="password" name="" placeholder="密码" required lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+
+            <div class="layui-row">
+                <div class="layui-col-md4 layui-col-md-offset4">
+                    {{ .xsrfdata }}
+                    <button class="layui-btn" lay-submit lay-filter="formDemo" style="display: block;width: 100%">登陆</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{{/*    <div class="layui-layer layui-layer-dialog layui-layer-border layui-layer-msg" id="layui-layer9" type="dialog" times="9" showtime="3000" contype="string" style="z-index: 19891023; top: 210.5px; left: 629px;"><div id="" class="layui-layer-content layui-layer-padding"><i class="layui-layer-ico layui-layer-ico5"></i>必填项不能为空</div><span class="layui-layer-setwin"></span></div>*/}}
+
+
+</div>
+
+
+<script src="/static/layui/layui.all.js"></script>
+<script>
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    ;!function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+
+    }();
+</script>
+</body>
+</html>

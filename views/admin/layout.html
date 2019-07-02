@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Beego | 系统</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    {{/*header*/}}
+    <div class="layui-header">
+        <div class="layui-logo">beego版后台系统</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">系统</a></li>
+            <li class="layui-nav-item"><a href="">会员管理</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">订单管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    冬天的冬
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退出</a></li>
+        </ul>
+    </div>
+    {{/*菜单*/}}
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item"><a href="">管理员</a></li>
+                <li class="layui-nav-item"><a href="">角色</a></li>
+                <li class="layui-nav-item"><a href="">权限</a></li>
+                <li class="layui-nav-item"><a href="">菜单</a></li>
+                <li class="layui-nav-item"><a href="">操作日志</a></li>
+            </ul>
+        </div>
+    </div>
+    {{/*内容*/}}
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 5px;">
+            <div class="layui-fluid" style="padding: 0">
+                {{.LayoutContent}}
+            </div>
+        </div>
+    </div>
+    {{/*底部*/}}
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © 底部一般放个公司版权或系统版本说明 - 底部固定区域
+    </div>
+</div>
+<script src="/static/layui/layui.all.js"></script>
+<script>
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    ;!function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+
+    }();
+</script>
+</body>
+</html>
